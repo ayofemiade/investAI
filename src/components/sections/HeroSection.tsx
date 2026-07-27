@@ -148,9 +148,10 @@ function FloatingParticles() {
 }
 
 // ─── Magnetic CTA Button ───────────────────────────────────────────────────────
-function MagneticButton({ children, href, className, style }: {
+function MagneticButton({ children, href, id, className, style }: {
   children: React.ReactNode;
   href: string;
+  id?: string;
   className?: string;
   style?: React.CSSProperties;
 }) {
@@ -176,6 +177,7 @@ function MagneticButton({ children, href, className, style }: {
     <motion.a
       ref={ref}
       href={href}
+      id={id}
       style={{ x, y, ...style }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
