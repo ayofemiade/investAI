@@ -87,17 +87,17 @@ export function Navbar() {
 
 
           <Link
-            href="/analytics"
+            href="/signup?mode=signin"
             className="text-xs font-medium text-slate-300 hover:text-white px-3 py-2 transition-colors"
           >
-            Terminal
+            Sign In
           </Link>
 
           <Link
-            href="/strategies"
-            className="group relative inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 transition-all duration-200 shadow-lg shadow-emerald-900/30 hover:shadow-emerald-500/20 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+            href="/signup"
+            className="group relative inline-flex items-center gap-2 px-4.5 py-2 rounded-lg text-xs font-semibold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 transition-all duration-200 shadow-lg shadow-emerald-900/30 hover:shadow-emerald-500/20 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
           >
-            <span>Launch Platform</span>
+            <span>Sign Up</span>
             <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </Link>
         </div>
@@ -140,11 +140,18 @@ export function Navbar() {
               ))}
               <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
                 <Link
-                  href="/strategies"
+                  href="/signup"
                   onClick={() => setMobileMenuOpen(false)}
                   className="w-full text-center py-3 rounded-lg text-sm font-semibold text-white bg-gradient-to-r from-emerald-600 to-teal-600 shadow-lg shadow-emerald-900/40"
                 >
-                  Launch Platform
+                  Sign Up
+                </Link>
+                <Link
+                  href="/signup?mode=signin"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full text-center py-2.5 rounded-lg text-sm font-medium text-slate-300 hover:text-white bg-white/5 border border-white/10"
+                >
+                  Sign In
                 </Link>
               </div>
             </div>
